@@ -1,0 +1,29 @@
+{% load sekizai_tags %}
+<div class="excursion">
+    <h2>{{ excursion.title }}
+        <small>({{ time_length }} ч.)</small>
+    </h2>
+    <div class="description">{{ excursion.description }}</div>
+    <span class="toggle">расценки</span>
+
+    <div class="price">
+        <table>
+            <thead>
+            <tr>
+                <th>Кол-во человек в группе</th>
+                {% for k, v in prices %}
+                    <td>{{ k }}</td>
+                {% endfor %}
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>Цена в расчете на человека, руб.</th>
+                {% for k, v in prices %}
+                    <td>{{ v }}</td>
+                {% endfor %}
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

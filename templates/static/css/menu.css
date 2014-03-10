@@ -1,0 +1,117 @@
+/* menu begin */
+ul.menu {
+    float:left;
+    width:100%;
+    border-bottom: 1px solid #ccc;
+    list-style: none;
+    padding-left:0;
+    margin: 0;
+}
+
+ul.menu .icon {
+    float: left;
+    display: block;
+    height: 24px;
+    margin-right: 4px;
+    text-align: left;
+    border: medium none;
+}
+
+ul.menu .selected,
+ul.menu li.ancestor{
+    background: #EEE url("images/pw_maze_skyblue.png");
+    /*text-shadow: 0px 0px 3px silver;*/
+	color:white;/*#003366;*/
+}
+
+.selected{
+    /*pointer-events: none;*/
+}
+
+ul.menu .selected a{
+    color: black;
+    /*text-decoration: ;*/
+}
+
+ul.menu a:hover {
+    background: #EEE url("images/pw_maze_blue.png");
+}
+
+
+ul.menu li {
+    float: left;
+    position: relative;
+    border-right: 1px solid #BBB;
+    text-align: center;
+}
+
+ul.menu li a{
+    padding:8px 16px;
+    font-size: 24px;
+    text-align:left;
+    line-height: 24px;
+    display: block;
+    color: #00AEEF;
+    overflow: hidden;
+}
+
+ul.menu li a:hover {
+    color: black;
+}
+
+
+/* second depth */
+ul.menu ul {
+    list-style: none;
+    display: none;
+}
+
+ul.menu ul {
+    border: none;
+    display:none;
+
+    padding:0;
+    margin:0;
+
+    list-style:none;
+    position:absolute;
+
+    width:180px;
+
+    box-shadow:0 2px 2px gray;
+    background:#FFF;
+    z-index: 9999;
+}
+
+ul.menu ul li {
+    border-top:1px solid #ccc;
+    font-size: 12px;
+    width: 100%;
+}
+
+ul.menu ul li a {
+	padding:8px 8px;
+	display: block;
+    font-size: 12px;
+    line-height: 1.2;
+    /*width: 100%;*/
+	color: #00AEEF;
+    overflow: hidden;
+}
+
+/* menu end */
+
+/* breadcrumbs */
+
+.breadcrumbs {
+	padding-left:2.7em;
+	font-size: 0.8em;
+	color: #003366;
+    list-style: none;
+}
+
+.breadcrumbs li {
+    float: left;
+}
+
+/* end breadcrumbs */

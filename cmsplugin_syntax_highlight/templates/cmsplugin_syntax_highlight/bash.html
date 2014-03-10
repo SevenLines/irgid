@@ -1,0 +1,13 @@
+{% extends "cmsplugin_syntax_highlight/plain.html" %}
+{% load cms_tags sekizai_tags %}
+
+{% block content %}
+{% addtoblock "js" %}
+<script src="{{ syntax_highlighter }}scripts/shBrushBash.js"></script>
+{% endaddtoblock %}
+{% if instance and instance.content %}
+    <pre class="brush: bash">
+    {{ instance.content }}
+    </pre>
+{% endif %}
+{% endblock %}

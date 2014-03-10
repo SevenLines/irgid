@@ -1,0 +1,29 @@
+{% load i18n thumbnail placeholder_tags %}
+<p>{% render_placeholder gallery.description "description" %}</p>
+
+<table class=gallery cellpadding="0" cellspacing="0">
+    <tr>
+        {% for im in images %}
+            <td>
+                <div class="photo">
+                    <div class="top"></div>
+                    <div class="middle">
+                        <a href="{{ im.url }}">
+                            <img src="{% thumbnail im.image 250x250 %}"
+                                 alt="{{ im.default_alt_text|default_if_none:"" }}" class="image">
+                        </a>
+                    </div>
+                    <div class="bottom"></div>
+                    <div class="title">
+                        {{ im.default_caption|default_if_none:"" }}
+                    </div>
+                </div>
+            </td>
+            {% if forloop.counter|divisibleby:"3" %}
+                </tr>
+                <tr>
+            {% endif %}
+        {% endfor %}
+        </tr>
+</table>
+</ul>

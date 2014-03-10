@@ -1,0 +1,13 @@
+<div class="lab">
+    <h2 class="title">{{ lab.title }}</h2>
+    <div class="description">
+        {{ lab.description|safe }}
+        <ol class="tasks">
+        {% for task in tasks %}
+            <li class="{% if task.selected %}selected {% endif %}{{ task.complexity }}">
+                {{ task.description|safe }}
+            </li>
+        {% endfor %}
+        </ol>
+    </div>
+</div>

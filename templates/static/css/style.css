@@ -1,0 +1,121 @@
+body {
+    padding-top: 8px;
+    margin-bottom: 2em;
+    margin-top: 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+.nav .ancestor > a{
+    text-decoration: underline;
+}
+
+/* excursions */
+
+.excursion {
+font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+}
+
+.excursion .toggle {
+    color: royalblue;
+}
+
+.excursion .toggle {
+    cursor: pointer;
+    border-bottom: dashed 1px;
+}
+
+.excursion .toggle:hover {
+    color: black;
+}
+
+.excursion h2 {
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.excursion .description {
+    /*font-size: 1.2em;*/
+    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+}
+
+.price {
+    margin-top: 8px;
+}
+
+.price table {
+    border: 1px solid black;
+    border-bottom: none;
+    border-right: none;
+    border-collapse: separate;
+    /*font-size: 1e*/
+}
+
+.price th, .price td  {
+    padding: 0.5em;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    background-color: white;
+    text-align: center;
+}
+
+/* end excursions */
+
+/* gallery */
+
+.gallery td{
+	display:block;
+	float: left;
+	width:33%;
+}
+
+.gallery {
+	padding:0 0 1em 0;
+	text-align: center;
+	float: left;
+	width:100%;
+}
+
+.gallery .photo {
+	display:block;
+	margin:12px auto;
+	text-align: center;
+	width:280px;
+}
+
+.gallery .top {
+	display:block;
+	width:280px;
+	height:19px;
+	background: url('images/postmark_top.png') no-repeat 4px 0;
+}
+
+.gallery .bottom {
+	display:block;
+	width:280px;
+	height:19px;
+	background: url('images/postmark_bottom.png') no-repeat 4px 100%;
+}
+
+.gallery .middle {
+	display:block;
+	height:100%;
+	width:280px;
+	margin:0 4px;
+	background: url('images/postmark_mid.png') repeat-y 0 0;
+}
+
+.gallery .photo .title
+{
+	/*border: 1px solid #888;*/
+	padding: 0.5em;
+}
+
+.gallery .photo .image {
+	width:250;
+	background:none;
+	border:3px solid white;
+}
+

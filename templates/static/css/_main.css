@@ -1,0 +1,468 @@
+@CHARSET "UTF-8";
+
+/* This file contains basic styles for document*/
+
+body{
+	margin:0;
+	padding:0;
+	/*background-color: #EDEDED;*/
+	background-image: url("images/pw_maze_gray.png");
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* TABLE OF CONTENT STYLE */
+#toc {
+    margin:0;
+    padding:0;
+}
+#toc ul{
+    /*list-style: none;*/
+    margin:0;
+    padding-left:1.3em;
+    list-style-type: circle;
+}
+
+
+/* CONTENT */
+
+.content h1 {
+	margin:0;
+	font-weight: normal;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: #003366;
+}
+
+
+.content h2 {
+	margin: 0;
+	padding:0;
+	margin-top:0.5em;
+	font-weight: normal;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: #003366;
+}
+
+.content h3 {
+	margin:0;
+	margin-top:0.5em;
+}
+
+.content li {
+	padding-bottom:0.5em;
+}
+
+.content table {
+	border: solid 1px gray;
+	border-collapse:collapse;
+}
+
+.content td,
+.content th {
+	padding: 4px;
+	border: 1px solid silver;
+} 
+
+.content th  {
+	background-color: #EEE;
+	color:gray;
+	text-shadow: 1px 1px white;
+}
+
+a {
+	color: #00AEEF;
+}
+a:hover {
+	color: black;
+}
+
+/* ICONS */
+a[href$='.pdf'] {
+    background:transparent url(images/pdf_icon.png) center left no-repeat;
+    display:inline-block;
+    padding-left:20px;
+    line-height:20px;
+}
+
+a[href$='.djvu'] {
+    background:transparent url(images/djvu_icon.gif) center left no-repeat;
+    display:inline-block;
+    padding-left:20px;
+    line-height:20px;
+}
+
+a[href$='.doc'], a[href$='.docx'] {
+    background:transparent url(images/doc_icon.jpeg) center left no-repeat;
+    display:inline-block;
+    padding-left:20px;
+    line-height:20px;
+}
+
+/* END ICONS */
+
+/* Main wrapper wich is hold all contents*/
+.wrapper{
+	margin: 0 auto;
+	margin-bottom: 10em;
+	max-width: 1000px;
+	min-width: 353;
+	background-color: #FDFDFD;
+	border-top:none;
+	box-shadow:0px 0px 6px silver;
+	border-radius: 0 0 8px 8px;
+	padding: 0 0 1em;	
+}
+
+.description {
+	font-size: 1.25em;
+}
+
+/*All what is below menu*/
+.content{
+	padding: 0 2em;
+	display:block;
+	background-color: #FDFDFD;	
+}
+
+.plain_text{
+	font-family: Verdana,Arial;
+	padding: 0;
+}
+
+
+/*img style in text*/
+
+left {
+     float:left;
+     display:block;
+}
+
+
+.img-small{
+	display: block;
+	border-radius: 1px;
+	border: solid 1px gray;
+        max-height:500px;
+        max-width: 100%;
+	margin: 0.5em 0 2em 0;
+}
+
+.plain_text b,
+.plain_text strong{
+	color: darkblue;
+}
+
+.plain_text code {
+	color: darkblue;
+	font-size: 1em;
+}
+
+.lessons_list {
+	display:block;
+	list-style: none;
+	padding-left: 0;
+	margin-top: 0;
+	float: left;
+	font-size: 1.1em;
+}
+
+
+.mtyp {
+	font-weight:bold;
+	color: #606;
+	font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+}
+
+.mtag {
+	font-weight:bold;
+	color: #069;
+	font-size:14px;
+	font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+}
+
+/*Notes, for text that is for info only*/
+.note{
+	background-color: #DFD;	
+	padding:1em;
+	margin: 1em 0;
+	border:solid thin silver;
+	border-radius:6px;
+}
+
+.highlight {
+    background-color: white;	
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+
+
+.syntaxhighlighter  {
+    border: solid 1px silver;
+    padding: 2px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}    
+
+.toolbar {
+    display: none;
+}
+
+/* Style for immitating console in DIV block*/
+.console {
+  font-family:Courier New;
+  color: #CCCCCC;
+  background: #000000;
+  border: 3px double #CCCCCC;
+  padding: 5px;
+  margin: 1em 0;
+  line-height:1.3em;
+}
+
+/*Style for immitating console in SPAN block*/
+.consoleIn {
+  font-family:Courier;
+ color: #CCCCCC;
+  background: #000000;
+  padding: 2px;
+}
+
+.text {
+  font-family:Times New Roman;
+  font-size: 16px;
+  background-color: #FFFFF8;
+  color: #000;
+  border: 3px double #CCCCCC;
+  padding: 1em;
+  margin: 1em 0;
+  line-height:1.3em;
+}
+
+.clear {
+	clear:both;
+}
+
+.trace {
+	display: block;
+	width: 300;
+	height: auto;
+	padding: 2em;
+	float:left;
+	margin: 1em;
+	border-radius: 16px 0 0 0;
+	border: 2px solid gray;
+	z-index: 100;
+	background-color: Orange;
+	overflow: scroll;
+}
+
+.footer {
+	height:0;
+	margin-top:0;
+}
+
+hr {
+	color: #003366;
+}
+
+.breadcrumbs {
+	padding-left:2.7em;
+	font-size: 0.8em;
+	color: #003366;
+}
+
+.breadcrumbs li {
+    float: left;
+}
+
+/* lab */
+
+.lab {
+	padding:0;
+	margin:0;
+	display: block;
+}
+
+
+.lab h2 {
+	color: #003366;
+	cursor: pointer;
+	border-bottom:dashed 1px;
+	display: inline-block;
+	margin:0;
+	margin-bottom: 0.3em;
+	padding:0;	
+}
+
+.lab h2:hover {
+	color: #FF7700;
+}
+
+/* lab */
+
+/* tasks */
+
+.tasks {
+/*    padding-left:2em;*/
+    overflow: hidden;
+}
+
+.tasks li {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 10px;
+    background: #EEEEEE;
+    border:silver 1px solid;
+}
+
+.tasks li a { color:#003366; }
+.tasks li a:hover { color:black; }
+
+
+.tasks li.easy,
+.tasks li.medium,
+.tasks li.hard,
+.tasks li.nightmare {
+	border:gray 1px solid;
+}
+
+.tasks .easy {background-color: #88DD22;}
+.tasks .medium {background-color: #DDDD22; }
+.tasks .hard {background-color: #DD8822; }
+.tasks .nightmare { background-color: #DD2200; }
+
+.tasks .selected {
+    background:silver;
+    color: gray;
+}
+
+.tasks .gallery {
+    overflow: hidden;
+    float: left;
+}
+
+.tasks .gallery .item{
+    padding: 8px;
+    margin: 8px;
+    margin-left:0;
+    border:gray 1px solid;
+    float:left;  
+    border-radius: 4px;
+}
+
+.tasks .gallery .item .label {
+    text-align: center; 
+    font-weight: bold;
+}
+
+.tasks .gallery .item img {
+    border: 1px solid gray;
+    width:100px;
+}
+
+
+/* end tasks */
+
+/* regex */
+
+.regex {
+	border: 1px solid gray;
+	padding: 0.5em;
+	margin: 1em; 
+	border-radius: 8px;
+	background-color: #EEE;
+}       				
+
+.regex dt {
+	font-size:1.5em;
+	color: #08E;
+	
+}
+
+.regex dt:before {
+}
+
+.regex dd {
+	margin-left:0;
+	margin-top: 0.5em;
+}
+.regex dd b {
+	background-color: yellow;
+	font-weight: normal;;
+}
+.regex dd i{
+	background-color: #BF0;
+	font-style: normal;	
+}
+
+/* regex */
+
+/* login */ 
+
+.login form {
+	display:block;
+	width: 400px;
+	margin: 1em 1em;
+}
+
+.login form label, .login form input {
+	margin-right: 0.5em;
+	display: inline-block;
+}
+
+.login form label {
+	font-family: sans-serif;
+}
+
+/* end login */
+
+/* admin */ 
+
+#admin {
+	padding:1em;
+	padding-top:0;
+	display:block;
+	float: right;
+	right: 0;
+	overflow: hidden;
+	position: fixed;
+}
+
+#admin #slider {
+	position:relative;
+	top: -1.55em;
+	border-radius: 0 0 8px 8px;	
+	background-color: #EEE;
+        background-image: url("images/pw_maze_white.png");
+	border-top:0;
+	box-shadow: 0 0 4px 2px silver;
+}
+
+#admin #slider:hover{
+	box-shadow: 0 0 4px 2px orange;
+}
+
+#admin.fixed #slider {
+	top: 0;
+} 
+
+#admin a{
+	display:block;	
+	text-decoration: none;
+	font-size: 16px;
+	padding:8px;
+	border-bottom:solid silver 1px;
+	text-align:center;
+	padding-top:4px;
+}
+
+#admin a:last-child {
+	border-bottom:none;
+
+}
+
+/* admin info */
+
+                 
