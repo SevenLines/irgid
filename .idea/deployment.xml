@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="Locum-irgid">
+  <component name="PublishConfigData" serverName="Locum-irgid" compareModeInSync="TIMESTAMP" showEqualInSync="true">
     <serverData>
       <paths name="Locum-irgid">
         <serverdata>
@@ -8,19 +8,18 @@
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
           <excludedPaths>
-            <excludedPath path="/media" />
-            <excludedPath local="true" path="$PROJECT_DIR$/media" />
             <excludedPath local="true" path="$PROJECT_DIR$/static" />
             <excludedPath path="/static" />
             <excludedPath path="/app/settings_db.py" />
             <excludedPath path="/django.wsgi" />
             <excludedPath local="true" path="$PROJECT_DIR$/app/settings_db.py" />
             <excludedPath local="true" path="$PROJECT_DIR$/django.wsgi" />
+            <excludedPath path="/media" />
+            <excludedPath local="true" path="$PROJECT_DIR$/media" />
           </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
-    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
 

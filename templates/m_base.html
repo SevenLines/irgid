@@ -1,9 +1,11 @@
-{% load staticfiles cms_tags sekizai_tags menu_tags email_hider_tags %}
-{{ text_block|hide_all_emails|safe }}
+{% load staticfiles cms_tags sekizai_tags menu_tags %}
 <html>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="экскурсии, Иркутск, Байкал, экскурсионное агенство, Иркутск в картинках, Иркутск на открытках, sightseeings, Irkutsk, Baikal, tours" />
+<meta name="description" content="Иркутское экскурсионное агенство, предлагает экскурсии по городу Иркутску и Прибайкалью" />
     {% render_block "css" %}
     {% addtoblock "css" %}
         <link rel="stylesheet" href="{% static 'ball/css/bootstrap.min.css' %}" media="screen">

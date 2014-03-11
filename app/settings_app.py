@@ -31,10 +31,6 @@ INSTALLED_APPS = (
     'cmsplugin_markdown',
     # 'cms.plugins.text',
 
-    'm_cmsplugin_labs',
-    'm_cmsplugin_toc',
-    'cmsplugin_syntax_highlight',
-    'menu_icons',
     'excursions',
     'image_gallery',
 

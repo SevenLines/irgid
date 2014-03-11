@@ -7,7 +7,7 @@ body {
 }
 
 .container.main {
-    padding: 70px 2em 2em;git
+    padding: 70px 2em 2em;
     box-shadow: 0 0 8px gray;
     background-color: white;
     border-radius: 0 0 16px 16px;
@@ -168,14 +168,12 @@ font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
 }
 
 .carousel-caption {
-    /*top:20px;*/
-    /*bottom: init1ial;*/
     background-color: rgba(148, 148, 148, 0.90);
-    *background-color: gray;
+    /**background-color: gray;*/
     border-radius: 8px;
     border: solid 3px gray;
     padding: 0 1em 30px;
     color: white;
     text-shadow: none;
-    text-align: justify;
+    text-align: center;
 }
