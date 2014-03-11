@@ -1,19 +1,22 @@
-{% load staticfiles cms_tags sekizai_tags menu_tags %}
+{% load staticfiles cms_tags sekizai_tags menu_tags email_hider_tags %}
+{{ text_block|hide_all_emails|safe }}
 <html>
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% render_block "css" %}
     {% addtoblock "css" %}
-        <link rel="stylesheet" href="{% static 'ball/css/bootstrap.min.css' %}" media="all">
+        <link rel="stylesheet" href="{% static 'ball/css/bootstrap.min.css' %}" media="screen">
     {% endaddtoblock %}
     {% addtoblock "css" %}
-        <link rel="stylesheet" href="{% static 'css/style.css' %}" media="all">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen">
     {% endaddtoblock %}
-
-
-    {% block styles_top %}
-    {% endblock %}
+    {% addtoblock "css" %}
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" href="{% static 'css/bootstrap-ie7.css' %}" media="all">
+        <![endif]-->
+    {% endaddtoblock %}
     <title>{% page_attribute page_title %}</title>
-
 </head>
 <body>
 {% cms_toolbar %}
@@ -39,7 +42,7 @@
         </div>
     </div>
 </div>
-<div class="container theme-showcase">
+<div class="main container theme-showcase">
     {% block inner %}
     {% endblock %}
 </div>
@@ -56,6 +59,17 @@
 
 {% addtoblock "js" %}
     <script src="{{ STATIC_URL }}js/main.js"></script>
+{% endaddtoblock %}
+
+{% addtoblock "js" %}
+    <!--[if lt IE 9]>
+          <script src="{{ STATIC_URL }}js/html5shiv.js"></script>
+    <![endif]-->
+{% endaddtoblock %}
+{% addtoblock "js" %}
+    <!--[if lt IE 9]>
+          <script src="{{ STATIC_URL }}js/respond.min.js"></script>
+    <![endif]-->
 {% endaddtoblock %}
 
 {% block scripts_top %}

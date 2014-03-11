@@ -38,7 +38,8 @@ INSTALLED_APPS = (
     'excursions',
     'image_gallery',
 
-    'utils'
+    'utils',
+    'cmsplugin_bootstrap_carousel',
 )
 
 # THUMBNAIL_DEBUG = True

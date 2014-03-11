@@ -1,0 +1,51 @@
+{% load sekizai_tags %}
+{% addtoblock "js" %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#{{ instance.domid }}").carousel({interval: {{ instance.interval }}});
+        });
+
+        $(window).load(function () {
+            var carousel_items = $("#{{ instance.domid }}");
+            var height = 0;
+            carousel_items.each(function () {
+                height = Math.max(height, $(this).height());
+            });
+            carousel_items.height(height);
+        });
+    </script>
+{% endaddtoblock %}
+
+<div id="{{ instance.domid }}" class="carousel slide">
+    <!-- indicators -->
+    <ol class="carousel-indicators">
+        {% for item in instance.carouselitem_set.all %}
+            <li class="{% if forloop.first %}active{% endif %}" data-target="#{{ instance.domid }}"
+                data-slide-to="{{ forloop.counter0 }}"></li>
+        {% endfor %}
+    </ol>
+    <!-- end indicators -->
+    <!-- inner -->
+    <div class="carousel-inner">{% for item in instance.carouselitem_set.all %}
+        <div class="{% if forloop.first %}active {% endif %}item">
+            {% if item.image %}
+                <img class="img-responsive" alt="" src="{{ item.image.url }}">
+                {% if item.caption_title or item.caption_content %}
+                    <div class="carousel-caption">
+                        <h1>{{ item.caption_title }}</h1>
+                        <h4>{{ item.caption_content }}</h4>
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>{% endfor %}
+    </div>
+    <!-- end inner -->
+    <!-- navigation -->
+    <a class="left carousel-control" href="#{{ instance.domid }}" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#{{ instance.domid }}" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    <!-- end navigation -->
+</div>
