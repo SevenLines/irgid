@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Locum-irgid" compareModeInSync="TIMESTAMP" showEqualInSync="true">
+  <component name="PublishConfigData" serverName="Locum-irgid" showNewOnTargetInSync="false">
     <serverData>
       <paths name="Locum-irgid">
         <serverdata>
@@ -16,6 +16,9 @@
             <excludedPath local="true" path="$PROJECT_DIR$/django.wsgi" />
             <excludedPath path="/media" />
             <excludedPath local="true" path="$PROJECT_DIR$/media" />
+            <excludedPath local="true" path="$PROJECT_DIR$/app/settings_debug.py" />
+            <excludedPath path="/app/settings_debug,py" />
+            <excludedPath path="/app/settings_debug.py" />
           </excludedPaths>
         </serverdata>
       </paths>
